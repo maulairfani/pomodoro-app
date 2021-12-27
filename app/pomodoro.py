@@ -67,8 +67,8 @@ if mulai:
         col2.write('')
     col2.write('You can play your music here!')
     if musik == 'Lo-fi Jazz':
-        col2.audio('jazz.wav')
+        col2.audio('app/jazz.wav')
     elif musik == 'Lo-fi Cool':
-        col2.audio('cool.wav') 
+        col2.audio('app/cool.wav') 
     time = timer(t1, t2)
     col1.time
