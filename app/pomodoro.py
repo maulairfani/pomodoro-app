@@ -41,7 +41,7 @@ def timer(t1, t2):
             st.subheader(f"⏳ Waktu tersisa {timer2}")
             time.sleep(1)
             t2 -= 1
-            st.error("⏰ 5 minute break is over!")
+            st.error("⏰ Waktu istirahat selesai!")
             
     
 if mulai:
