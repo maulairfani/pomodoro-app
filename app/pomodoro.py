@@ -46,9 +46,9 @@ def timer(t1, t2):
     
 if mulai:
     if musik == 'Lo-fi Jazz':
-        st.audio('pomodoro-app/app/jazz.wav')
+        st.audio('app/jazz.wav')
     elif musik == 'Lo-fi Cool':
-        st.audio('pomodoro-app/app/cool.wav')  
+        st.audio('app/cool.wav')  
     st.subheader(tugas)
     st.write('''*Tetaplah fokus hingga timer selesai!*''')
     timer(t1, t2)
