@@ -24,7 +24,7 @@ st.markdown('''
 side = st.sidebar
 side.subheader('Sesuaikan pomodoro senyamanmu!')
 form = side.form('data_pomodoro')
-tugas = form.text_input('Tugas')
+tugas = form.text_input('Nama Tugas')
 t1 = form.number_input('Waktu Fokus (menit)', min_value=0, max_value=120)
 # pengulangan = form.slider('Pengulangan', min_value=1, max_value=5)
 t2 = form.number_input('Waktu Istirahat (menit)', min_value=0, max_value=25)
