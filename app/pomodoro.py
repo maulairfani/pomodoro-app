@@ -28,8 +28,8 @@ def timer(t1, t2):
         while t1:
             mins, secs = divmod(t1, 60)
             timer = '{:02d}:{:02d}'.format(mins, secs)
-            st.subheader(f"⏳ Waktu tersisa *{timer}* ")
-            time.sleep(1)
+            st.subheader(f"⏳ Waktu tersisa *{timer}* ⏳")
+            time.sleep(0.05)
             t1 -= 1
             st.success("🔔 Waktu fokus selesai! Anda dapat istirahat sejenak")
 
@@ -38,8 +38,8 @@ def timer(t1, t2):
             # Start the break
             mins2, secs2 = divmod(t2, 60)
             timer2 = '{:02d}:{:02d}'.format(mins2, secs2)
-            st.subheader(f"⏳ Waktu tersisa {timer2}")
-            time.sleep(1)
+            st.subheader(f"⏳ Waktu tersisa *{timer2}* ⏳")
+            time.sleep(0.05)
             t2 -= 1
             st.error("⏰ Waktu istirahat selesai!")
             
