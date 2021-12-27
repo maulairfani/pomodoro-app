@@ -14,7 +14,7 @@ sebagai pengatur waktu saat belajar.
 ''')
 st.markdown('''
 ## Cara Menggunakan Pomodoro App
-1. Lengkapi data disamping terkait nama tugas, waktu fokus, waktu istirahat, dan musik pengiring
+1. Lengkapi data pada menu di samping kiri terkait nama tugas, waktu fokus, waktu istirahat, dan musik pengiring
 2. Tekan tombol *Mulai !* untuk memulai timer
 3. Kamu dapat melihat timer berjalan dan player musik di sebelah kanan!
 4. Ulangi teknik di atas hingga empat kali
