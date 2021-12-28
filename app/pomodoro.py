@@ -45,7 +45,7 @@ def timer_fokus(waktu_fokus):
             st.subheader(f"⏳ Waktu fokus *{timer}* ⏳")            
             time.sleep(0.05)
             waktu_fokus -= 1
-            st.success("🔔 Waktu fokus selesai! Anda dapat istirahat sejenak")
+        st.success("🔔 Waktu fokus selesai! Anda dapat istirahat sejenak")
 
 def timer_istirahat(waktu_istirahat):
     with col1.empty():
@@ -55,7 +55,7 @@ def timer_istirahat(waktu_istirahat):
             st.subheader(f"⏳ Waktu istirahat *{timer}* ⏳")            
             time.sleep(0.05)
             waktu_istirahat -= 1
-            st.error("⏰ Waktu istirahat selesai!")
+        st.error("⏰ Waktu istirahat selesai!")
     
 if mulai:
     st.header(tugas)
