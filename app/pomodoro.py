@@ -64,7 +64,7 @@ if mulai:
     col2.write('Putar musikmu disini!')
     if musik == 'Lo-fi Jazz':
         col2.audio('app/jazz.wav')
-    elif musik == 'Lo-fi Cool':
+    else:
         col2.audio('app/cool.wav') 
     timer_fokus(waktu_fokus)
     timer_istirahat(waktu_istirahat)
