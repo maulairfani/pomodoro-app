@@ -37,7 +37,7 @@ mulai = form.form_submit_button('Mulai !')
 waktu_fokus *= 60
 waktu_istirahat *= 60
 
-def timer(waktu_fokus, t2):
+def timer(waktu_fokus, waktu_istirahat):
     with col1.empty():
         while waktu_fokus:
             mins, secs = divmod(waktu_fokus, 60)
