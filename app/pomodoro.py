@@ -25,8 +25,8 @@ side = st.sidebar
 side.subheader('Sesuaikan pomodoro senyamanmu!')
 form = side.form('data_pomodoro')
 tugas = form.text_input('Nama Tugas')
-t1 = form.number_input('Waktu Fokus (menit)', min_value=1, max_value=120)
-t2 = form.number_input('Waktu Istirahat (menit)', min_value=1, max_value=25)
+waktu_fokus = form.number_input('Waktu Fokus (menit)', min_value=1, max_value=120)
+waktu_istirahat = form.number_input('Waktu Istirahat (menit)', min_value=1, max_value=60)
 pilihan_musik = ['Lo-fi Jazz', 'Lo-fi Cool']
 musik = form.radio('Musik', options=pilihan_musik)
 
@@ -34,26 +34,26 @@ mulai = form.form_submit_button('Mulai !')
 
 #--------------------------------------#
 
-t1 *= 60
-t2 *= 60
+waktu_fokus *= 60
+waktu_istirahat *= 60
 
-def timer(t1, t2):
+def timer(waktu_fokus, t2):
     with col1.empty():
         while t1:
-            mins, secs = divmod(t1, 60)
+            mins, secs = divmod(waktu_fokus, 60)
             timer = '{:02d}:{:02d}'.format(mins, secs)
             st.subheader(f"⏳ Waktu fokus *{timer}* ⏳")
             time.sleep(0.05)
-            t1 -= 1
+            waktu_fokus -= 1
             st.success("🔔 Waktu fokus selesai! Anda dapat istirahat sejenak")
 
     with col1.empty():
-        while t2:
-            mins2, secs2 = divmod(t2, 60)
+        while waktu_istirahat:
+            mins2, secs2 = divmod(waktu_istirahat, 60)
             timer2 = '{:02d}:{:02d}'.format(mins2, secs2)
             st.subheader(f"⏳ Waktu istirahat *{timer2}* ⏳")
             time.sleep(0.05)
-            t2 -= 1
+            waktu_istirahat -= 1
             st.error("⏰ Waktu istirahat selesai!")
             
     
@@ -66,7 +66,7 @@ if mulai:
         col2.audio('app/jazz.wav')
     elif musik == 'Lo-fi Cool':
         col2.audio('app/cool.wav') 
-    timer(t1, t2)
+    timer(waktu_fokus, waktu_istirahat)
     st.write('Klik tombol *Mulai!* untuk mengulangi')
     st.write('---')
     st.caption('Terima kasih telah menggunakan pomodoro app 😊')
