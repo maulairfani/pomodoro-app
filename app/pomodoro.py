@@ -59,10 +59,9 @@ def timer_istirahat(waktu_istirahat):
     
 if mulai:
     st.header(tugas)
-    col1, col2, x = st.columns(3)
+    col1, col2 = st.columns(2)
     col1.write('*Tetaplah fokus hingga timer selesai!*')
-    col2.write('Putar musikmu disini!')
-    x.header('hahaha')
+    col2.write('*Putar musikmu disini!*')
     if musik == 'Lo-fi Jazz':
         col2.audio('app/jazz.wav')
     else:
