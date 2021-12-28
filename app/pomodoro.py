@@ -39,7 +39,7 @@ waktu_istirahat *= 60
 
 def timer(waktu_fokus, t2):
     with col1.empty():
-        while t1:
+        while waktu_fokus:
             mins, secs = divmod(waktu_fokus, 60)
             timer = '{:02d}:{:02d}'.format(mins, secs)
             st.subheader(f"⏳ Waktu fokus *{timer}* ⏳")
