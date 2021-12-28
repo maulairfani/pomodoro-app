@@ -1,10 +1,9 @@
 import streamlit as st
 import time
 
+# Judul dan Deskripsi
 st.title('⏳ Pomodoro App ⏳')
 st.caption('*Developed by Kelompok 6*')
-
-# Magic commands implicitly `st.write()`
 
 st.markdown('''
 ## Apa itu *pomodoro* ?
@@ -20,7 +19,8 @@ st.markdown('''
 4. Ulangi teknik di atas hingga empat kali
 ''')
 
-#-------------------#
+#--------------------------------------#
+# Sidebar
 side = st.sidebar
 side.subheader('Sesuaikan pomodoro senyamanmu!')
 form = side.form('data_pomodoro')
@@ -32,7 +32,7 @@ musik = form.radio('Musik', options=pilihan_musik)
 
 mulai = form.form_submit_button('Mulai !')
 
-#-------------------#
+#--------------------------------------#
 
 t1 *= 60
 t2 *= 60
@@ -49,7 +49,6 @@ def timer(t1, t2):
 
     with col1.empty():
         while t2:
-            # Start the break
             mins2, secs2 = divmod(t2, 60)
             timer2 = '{:02d}:{:02d}'.format(mins2, secs2)
             st.subheader(f"⏳ Waktu istirahat *{timer2}* ⏳")
