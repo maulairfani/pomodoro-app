@@ -70,4 +70,5 @@ if mulai:
     timer_istirahat(waktu_istirahat)
     st.write('Klik tombol *Mulai!* untuk mengulangi')
     st.write('---')
+    st.caption('Timer sengaja dicepatkan untuk keperluan demonstrasi')
     st.caption('Terima kasih telah menggunakan pomodoro app 😊')
