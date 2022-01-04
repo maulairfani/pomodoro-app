@@ -1,6 +1,6 @@
 # Pomodoro App
 
-Pomodoro App dapat dibuka melalui link di bawah ini
+Pomodoro App dapat dibuka melalui link berikut :
 https://share.streamlit.io/maulairfani/pomodoro-app/main/app/pomodoro.py
 
 ## Apa itu Pomodoro App?
